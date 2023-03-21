@@ -8,14 +8,13 @@
 int main(void)
 {
 	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
-	int C, c;
+	int a, c;
 
 	c = sizeof(str) / sizeof(int);
-	for (C = 0; C < c; C++)
+	for (a = 0; a < c; a++)
 	{
-		_putchar(str[C]);
+		_putchar(str[a]);
 	}
 	_putchar('\n');
 	return (0);
 }
-
