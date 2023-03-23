@@ -9,9 +9,16 @@
  *
  * Return: Add of number one and number two.
  */
-
-int add(int c, int d)
+int add(int c, int b)
 {
-	return (c + d);
+	for (c = 0; c <= 9; c++)
+	{
+		for (b = 97; b <= 122; b++)
+		{
+			_putchar(b);
+		}
+	_putchar('\n');
+
+	}
 }
 
