@@ -5,6 +5,7 @@
  * @str: string to be printed
  * Return: limit 
  */
+
 void puts_half(char *str)
 {
 	int lim, j, i;
