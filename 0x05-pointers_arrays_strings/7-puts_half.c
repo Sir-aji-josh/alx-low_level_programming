@@ -3,25 +3,25 @@
 /**
  * puts_half - prints half of a string.
  * @str: input string.
- * Return: no return 
+ * Return: no return.
  */
 void puts_half(char *str)
 {
-        int lim = 0, i;
+	int cpt = 0, i;
 
-        while (lim >= 0)
-        {
-                if (str[lim] == '\0')
-                        break;
-                lim++;
-        }
+	while (cpt >= 0)
+	{
+		if (str[cpt] == '\0')
+			break;
+		cpt++;
+	}
 
-        if (lim % 2 == 1)
-                i = lim / 2;
-        else
-                i = (lim - 1) / 2;
+	if (cpt % 2 == 1)
+		i = cpt / 2;
+	else
+		i = (cpt - 1) / 2;
 
-        for (i++; i < lim; i++)
-                _putchar(str[i]);
-        _putchar('\n');
+	for (i++; i < cpt; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
