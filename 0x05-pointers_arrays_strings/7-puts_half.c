@@ -1,35 +1,27 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string followed by \n
- * @str: string to be printed
- * Return: limit 
+ * puts_half - prints half of a string.
+ * @str: input string.
+ * Return: no return limit
  */
-
 void puts_half(char *str)
 {
-	int lim, j, i;
+	int lim = 0, i;
 
-	lim = 0;
-
-	while (str[lim] != '\0')
+	while (lim >= 0)
 	{
+		if (str[lim] == '\0')
+			break;
 		lim++;
 	}
 
-	if (lim % 2 == 0)
-	{
-		for (i = lim / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-	}
-	else if (lim % 2)
-	{
-		for (j = (lim - 1) / 2; j < lim - 1; j++)
-		{
-			_putchar(str[j + 1]);
-		}
-	}
+	if (lim % 2 == 1)
+		i = lim / 2;
+	else
+		i = (lim - 1) / 2;
+
+	for (i++; i < lim; i++)
+	        _putchar(str[i]);
 	_putchar('\n');
 }
