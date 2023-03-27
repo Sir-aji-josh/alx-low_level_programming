@@ -1,0 +1,1 @@
+readme file which is to 0x05-pointers_arrays_strings
