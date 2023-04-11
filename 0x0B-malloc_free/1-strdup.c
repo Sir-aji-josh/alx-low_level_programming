@@ -11,18 +11,18 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int indicator, len;
+	int indent, len;
 
 	if (str == NULL)
 		return (NULL);
-	for (indicator = 0; str[indicator]; indicator++)
+	for (indent = 0; str[indent]; indent++)
 		len++;
 	s = malloc(sizeof(char) * (len + 1));
 	if (s == NULL)
 		return (NULL);
-	for (indicator = 0; str[indicator]; indicator++)
+	for (indent = 0; str[indent]; indent++)
 	{
-	       s[indicator] = str[indicator];
+	       s[indent] = str[indent];
 	}
 	s[len] = '\0';
 	return (s);
