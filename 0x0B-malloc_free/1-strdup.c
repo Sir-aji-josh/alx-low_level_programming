@@ -10,20 +10,21 @@
  */
 char *_strdup(char *str)
 {
-	char *s;
-	int indent, len;
+	char *strdup;
+	int index, len;
 
 	if (str == NULL)
 		return (NULL);
-	for (indent = 0; str[indent]; indent++)
+
+	for (index = 0; str[index]; index++)
 		len++;
-	s = malloc(sizeof(char) * (len + 1));
-	if (s == NULL)
+	strdup = malloc(sizeof(char) * (len + 1));
+	if (strdup == NULL)
 		return (NULL);
-	for (indent = 0; str[indent]; indent++)
+	for (index = 0; str[index]; index++)
 	{
-	       s[indent] = str[indent];
+	       strdup[index] = str[index];
 	}
-	s[len] = '\0';
-	return (s);
+	strdup[len] = '\0';
+	return (strdup);
 }
