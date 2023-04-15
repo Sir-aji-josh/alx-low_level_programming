@@ -1,29 +1,6 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
-/**
- * errors - Errors from main
- */
-void errors(void)
-{
-	printf("Error\n");
-	exit(98);
-}
-
-/**
- * _strlen - length of a string
- * @s: string
- * Return: 0 success
- */
-int _strlen(char *s)
-{
-	int strlen = 0;
-
-	while (s[strlen] != '\0')
-		strlen++;
-	return (strlen);
-}
+#include <stdio.h>
+#include "main.h"
 
 /**
  * is_digit - checks if a string contains a non digit char
@@ -41,6 +18,29 @@ int is_digit(char *s)
 		i++;
 	}
 	return (1);
+}
+
+/**
+ * _strlen - length of a string
+ * @s: string
+ * Return: 0 success
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+/**
+ * errors - Errors from main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
 }
 
 /**
@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
 		{
 			digit2 = s2[len2] - '0';
 			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+
 			result[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
@@ -84,11 +85,11 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-		       putchar(result[i] + '0');
+			_putchar(result[i] + '0');
 	}
 	if (!a)
-		putchar('0');
-	putchar('\n');
+		_putchar('0');
+	_putchar('\n');
 	free(result);
 	return (0);
 }
