@@ -15,7 +15,7 @@ struct dog
 };
 
 /**
- * dog_poppy - Typedef for struct dog
+ * dog_poppy - Typedef for struct poppy dog gene
  */
 typedef struct dog dog_poppy;
 
