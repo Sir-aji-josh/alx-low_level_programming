@@ -1,11 +1,9 @@
-#ifndef _CALC_H_
-#define _CALC_H_
-
+#ifndef CALC_H
+#define CALC_H
 /**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
+ * struct op - A struct op.
+ * @op: operator.
+ * @f: pointer to function
  */
 typedef struct op
 {

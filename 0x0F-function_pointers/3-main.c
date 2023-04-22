@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, d;
+	int a, b, k;
 	int (*f)(int, int);
 
 	if (argc != 4)
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	d = f(a, b);
-        printf("%d\n", d);
+	k = f(a, b);
+        printf("%d\n", k);
 	return (0);
 }
