@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * printt_list - prints all the elements of a list_t
+ * printt_list - Function that prints all the elements of a list_t
  * @h: singly linked list.
  * Return: number of elements in this list
  */
