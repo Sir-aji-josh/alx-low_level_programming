@@ -6,7 +6,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t  count_cpt = 0;
+	size_t  list_cpt = 0;
 
 	while (h != NULL)
 	{
@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 			printf("[%d] %s\n", 0, "(nil)");
 
 		h = h->next;
-		count_cpt++;
+		list_cpt++;
 	}
-	return (count_cpt);
+	return (list_cpt);
 }
