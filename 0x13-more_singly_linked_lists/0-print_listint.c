@@ -5,10 +5,10 @@
 
 /**
  * print_listint - Function that prints all the elements of a listint_t list.
- * Description: Function that prints all the elements of a listint_t list
+ * Description: Function that prints all the elements of a listint_t list in array
  * @h: pointer to the listint_t
  *
- * Return: Number of nodes in list
+ * Return: Number of nodes in list listint_t
  */
 
 size_t print_listint(const listint_t *h)
