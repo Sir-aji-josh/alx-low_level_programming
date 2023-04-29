@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
@@ -10,11 +8,10 @@
  *
  * @head: Pointer to the head of the listint_t list address.
  *
- * @n: Is the that contain the details about the added new node
+ * @n: Is the data that contain the details about the added new node
  *
  * Return: The address of the new element, or NULL if it failed
  */
-
 listint_t *add_nodeint(listint_t **head, const int n)
 {
         listint_t *new_list;
@@ -31,7 +28,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
         /* Set next pointer of new added node to current head */
         new_list->next = *head;
 
-        /* Set head to point to the previous new added node */
+        /* Set head to point to the  new added node */
         *head = new_list;
 
         return (new_list);
