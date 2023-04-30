@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -17,13 +14,13 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
         unsigned int i = 0;
-        listint_t *temp = head;
+        listint_t *tmp = head;
 
-        while (temp && i < index)
+        while (tmp && i < index)
         {
-                temp = temp->next;
+                tmp = tmp->next;
                 i++;
         }
 
-        return (temp ? temp : NULL);
+        return (tmp ? tmp : NULL);
 }
