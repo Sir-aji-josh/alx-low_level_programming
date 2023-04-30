@@ -10,22 +10,22 @@
  *
  * @head: A pointer to  head of the listint_t linked list.
  *
- * @index: The index of the node to locate - indices start at 0.
+ * @index: The index of the node to locate
  *
  * Return: If the node does not exist - NULL.
  *         Else - the located node.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int node;
+        unsigned int node;
 
-	for (node = 0; node < index; node++)
-	{
-		if (head == NULL)
-			return (NULL);
+        for (node = 0; node < index; node++)
+        {
+                if (head == NULL)
+                        return (NULL);
 
-		head = head->next;
-	}
+                head = head->next;
+        }
 
-	return (head);
+        return (head);
 }
