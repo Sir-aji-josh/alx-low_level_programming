@@ -18,23 +18,22 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-        listint_t *new_list;
+        listint_t *new_node;
 
-        new_list = malloc(sizeof(listint_t));
-        if (!new_list)
+        new_node = malloc(sizeof(listint_t));
+        if (!new_node)
         {
                 return (NULL);
         }
 
         /* New added node */
-        new_list->n = n;
+        new_node->n = n;
 
         /* Set next pointer of new added node to current head */
-        new_list->next = *head;
+        new_node->next = *head;
 
         /* Set head to point to the  new added node */
-        *head = new_list;
+        *head = new_node;
 
-        return (new_list);
+        return (new_node);
 }
-
