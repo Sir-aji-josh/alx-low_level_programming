@@ -13,27 +13,21 @@
  *
  * @n: symbol to add to the linked list
  *
- * Return: To the address of the new element, 
- *               or back NULL if it failed
+ * Return: To the address of the new element.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-        listint_t *new_node;
+	listint_t *new_node;
 
-        new_node = malloc(sizeof(listint_t));
-        if (!new_node)
-        {
-                return (NULL);
-        }
+	if (head == NULL)
+		return (NULL);
 
-        /* New added node */
-        new_node->n = n;
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
 
-        /* Set next pointer of new added node to current head */
-        new_node->next = *head;
-
-        /* Set head to point to the  new added node */
-        *head = new_node;
-
-        return (new_node);
+	new_node->n = n;
+	new_node->next = *head;
+	*head = new_node;
+	return (new_node);
 }
