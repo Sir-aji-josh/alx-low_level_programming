@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - Function that prints a listint_t linked list.
+ * print_listint_safe - Function that prints a linked list.
  *
- * Description: Function that prints the linked list.
+ * Description: Function that prints the linke d list.
  *
  * @head: List of type linked listint_t to print
  *
