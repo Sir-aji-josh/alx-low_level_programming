@@ -14,27 +14,34 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *good = head;
-	listint_t *bad = head;
+	listint_t *good;
+	listint_t *bad;
 
-	if (!head)
-		return (NULL);
-
-	while (good && bad && bad->next)
+	good = head;
+	bad = head;
+	while (head && good && good->next)
 	{
-		bad = bad->next->next;
-		good = good->next;
-		if (bad == good)
+		head = head->next;
+		good = good->next->next;
+
+		if (head == good)
 		{
-		        good = head;
-			while (good != bad)
+			head = bad;
+			bad =  good;
+			while (1)
 			{
-				good = good->next;
-				bad = bad->next;
+				good = bad;
+				while (good->next != head && good->next != bad)
+				{
+					good = good->next;
+				}
+				if (good->next == head)
+					break;
+
+				head = head->next;
 			}
-			return (bad);
+			return (good->next);
 		}
 	}
-
 	return (NULL);
 }
