@@ -15,10 +15,10 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *good;
-	listint_t *bad;
+	listint_t *n2;
 
 	good = head;
-	bad = head;
+	n2 = head;
 	while (head && good && good->next)
 	{
 		head = head->next;
@@ -26,12 +26,12 @@ listint_t *find_listint_loop(listint_t *head)
 
 		if (head == good)
 		{
-			head = bad;
-			bad =  good;
+			head = n2;
+			n2 =  good;
 			while (1)
 			{
-				good = bad;
-				while (good->next != head && good->next != bad)
+				good = n2;
+				while (good->next != head && good->next != n2)
 				{
 					good = good->next;
 				}
