@@ -9,8 +9,7 @@
  *
  * Description: Reverses the listint_t linked list.
  * 
- * @head: A pointer to the address of the head of,
- *        the list_t list.
+ * @head: A pointer to the head of the link
  *
  * Return: A pointer to first node of the reversed list.
  */
