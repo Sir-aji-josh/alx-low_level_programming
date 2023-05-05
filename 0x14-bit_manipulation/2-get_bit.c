@@ -5,9 +5,9 @@
  * get_bit - Function that replaces the value of a bit
  *           at a given index
  *
- * Description: Returns the value of a bit at a given index
+ * Description: Replace the value of a bit at a given index
  *
- * @n: Digit to get the bit 
+ * @n: Number to get the bit 
  *
  * @index: The index, starting from 0 of the bit
  *
