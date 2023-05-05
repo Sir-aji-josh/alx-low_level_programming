@@ -12,8 +12,8 @@
 
 int get_endianness(void)
 {
-        int num_counts = 1;
-        char *endian = (char *)&num_counts;
+        int nums = 1;
+        char *endian = (char *)&nums;
 
         if (*endian == 1)
                 return (1);
