@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - Function that reads a text file 
- *                 and prints it to POSIX stdout
+ * read_textfile - Function that reads a text file and prints it
+ *                 to POSIX stdout
  *
- * @filename: A pointer to name of the read_text file
+ * @filename: A pointer to name of the new file created
  *
  * @letters: The number of letters the
  *           bash should read and print.
