@@ -5,7 +5,7 @@
  *
  * @filename: A pointer to the name of the new file created
  *
- * @text_content: The string insert to the end of the file.
+ * @text_content: The string add to the end of the file.
  *
  * Return: 1 on success and -1 on failure
  */
