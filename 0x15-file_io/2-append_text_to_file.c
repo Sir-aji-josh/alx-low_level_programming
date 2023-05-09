@@ -12,24 +12,28 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int o, w, len = 0;
+	int file_d, nletters, rw_r;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	file_d = open(filename, O_WRONLY | O_APPEND);
+
+	if (file_d == -1)
+		return (-1);
+
+	if (text_content)
 	{
-		for (len = 0; text_content[len];)
-			len++;
+		for (nletters = 0; text_content[nletters]; nletters++)
+			;
+
+		rw_r = write(file_d, text_content, nletters);
+
+		if (rw_r == -1)
+			return (-1);
 	}
 
-        o_open = open(filename, O_WRONLY | O_APPEND);
-	w_write = write(o_open, text_content, len);
-
-	if (o_open == -1 || w_write == -1)
-		return (-1);
-
-	close(o_open);
+	close(file_d);
 
 	return (1);
 }
