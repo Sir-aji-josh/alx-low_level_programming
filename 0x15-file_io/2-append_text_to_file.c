@@ -27,7 +27,6 @@ int append_text_to_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	/* Open and write in new file in append mode */
 	o_open = open(filename, O_WRONLY | O_APPEND);
 	w_write = write(o_open, text_content, len);
 
