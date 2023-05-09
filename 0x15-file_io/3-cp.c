@@ -39,7 +39,9 @@ void error_file(int file_from, int file_to, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, error_close;
+	int file_from;
+        int file_to;
+        int error_close;
 	ssize_t num_chars;
 	ssize_t	num_wr;
 	char buffer[1024];
