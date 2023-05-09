@@ -1,6 +1,5 @@
 #ifndef _MY_MAIN_H_
 #define _MY_MAIN_H_
-#define BUFFER_SIZE 1024 /*define size task 3 cp*/
 
 /* Libraries To Be Used To Get 0x15-file_io Done */
 #include <sys/types.h>
