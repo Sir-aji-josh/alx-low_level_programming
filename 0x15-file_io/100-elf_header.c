@@ -10,7 +10,7 @@
  * print_addr - Function that prints address
  * @ptr: pointer to the magic
  *
- * Return: Nothing
+ * Return: None
  */
 void print_addr(char *ptr)
 {
@@ -56,7 +56,7 @@ void print_addr(char *ptr)
  * print_type - Funtion that prints type
  * @ptr: pointer to magic
  *
- * Return: Nothing
+ * Return: None
  */
 void print_type(char *ptr)
 {
@@ -86,7 +86,7 @@ void print_type(char *ptr)
  * print_osabi - Funtion that prints osabi
  * @ptr: pointer to the magic
  *
- * Return: Nothing
+ * Return: None
  */
 void print_osabi(char *ptr)
 {
@@ -144,7 +144,7 @@ void print_data(char *ptr)
  * print_magic - Function that prints magic info
  * @ptr: pointer to magic
  *
- * Return: Nothing 
+ * Return: None
  */
 void print_magic(char *ptr)
 {
@@ -163,7 +163,7 @@ void print_magic(char *ptr)
  * check_sys - Function that check the version system
  * @ptr: pointer to the magic 
  *
- * Return: Nothing
+ * Return: None
  */
 void check_sys(char *ptr)
 {
