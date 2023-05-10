@@ -8,9 +8,9 @@
  *
  * @file_to: New current file_to
  *
- * @argv: arguments array pointer to character
+ * @argv: Arguments array pointer to vector
  *
- * Return: Nothing 
+ * Return: None 
  */
 void error_file(int file_from, int file_to, char *argv[])
 {
@@ -33,7 +33,7 @@ void error_file(int file_from, int file_to, char *argv[])
  *
  * @argc: Number of arguments
  *
- * @argv: Arguments array pointer to character
+ * @argv: Arguments array pointer to vector
  *
  * Return: Always void (0)
  */
