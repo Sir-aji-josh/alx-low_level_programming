@@ -8,7 +8,7 @@
  *
  * @file_to: New current file_to
  *
- * @argv: Arguments array pointer to vector
+ * @argv: Arguments  vector
  *
  * Return: None 
  */
@@ -29,11 +29,11 @@ void error_file(int file_from, int file_to, char *argv[])
 
 
 /**
- * main - Function that check the code for alx programs School students
+ * main - Function that check the code for ALX Africa in C language
  *
  * @argc: Number of arguments
  *
- * @argv: Arguments array pointer to vector
+ * @argv: Arguments  vector
  *
  * Return: Always void (0)
  */
