@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <sys/sat.h>
+#include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
 
@@ -25,7 +25,7 @@ void print_addr(char *ptr)
 	{
 		starts = 26;
 		printf("80");
-		for (i = begin; i >= 22; i--)
+		for (i = starts; i >= 22; i--)
 		{
 			if (ptr[i] > 0)
 				printf("%x", ptr[i]);
