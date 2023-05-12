@@ -2,20 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <sys/stat.h>
+#include <sys/sat.h>
 #include <fcntl.h>
 #include <unistd.h>
 
 /**
  * print_addr - Function that prints address
- * @ptr: pointer to the magic
+ * @ptr: To the magic
  *
  * Return: None
  */
 void print_addr(char *ptr)
 {
 	int i;
-	int begin;
+	int starts;
 	char sys;
 
 	printf("  Entry point address:               0x");
@@ -23,7 +23,7 @@ void print_addr(char *ptr)
 	sys = ptr[4] + '0';
 	if (sys == '1')
 	{
-		begin = 26;
+		starts = 26;
 		printf("80");
 		for (i = begin; i >= 22; i--)
 		{
@@ -38,8 +38,8 @@ void print_addr(char *ptr)
 
 	if (sys == '2')
 	{
-		begin = 26;
-		for (i = begin; i > 23; i--)
+		starts = 26;
+		for (i = starts; i > 23; i--)
 		{
 			if (ptr[i] >= 0)
 				printf("%02x", ptr[i]);
@@ -54,7 +54,7 @@ void print_addr(char *ptr)
 
 /**
  * print_type - Funtion that prints type
- * @ptr: pointer to magic
+ * @ptr: To the magic
  *
  * Return: None
  */
@@ -84,7 +84,7 @@ void print_type(char *ptr)
 
 /**
  * print_osabi - Funtion that prints osabi
- * @ptr: pointer to the magic
+ * @ptr: To the magic
  *
  * Return: None
  */
@@ -108,7 +108,7 @@ void print_osabi(char *ptr)
 
 /**
  * print_version - Funtion that prints version
- * @ptr: Pointer to the magic
+ * @ptr: To the magic
  *
  * Return: Nothing
  */
@@ -125,7 +125,7 @@ void print_version(char *ptr)
 }
 /**
  * print_data - Funtion that prints data
- * @ptr: pointer to the magic
+ * @ptr: To the magic
  *
  * Return: Nothing
  */
@@ -142,7 +142,7 @@ void print_data(char *ptr)
 }
 /**
  * print_magic - Function that prints magic info
- * @ptr: pointer to magic
+ * @ptr: To the  magic
  *
  * Return: None
  */
@@ -161,7 +161,7 @@ void print_magic(char *ptr)
 
 /**
  * check_sys - Function that check the version system
- * @ptr: pointer to the magic 
+ * @ptr: To the magic 
  *
  * Return: None
  */
@@ -190,7 +190,7 @@ void check_sys(char *ptr)
 
 /**
  * check_elf - Function that check if it is an elf file
- * @ptr: Pointer to the magic
+ * @ptr: To the magic
  *
  * Return: 1 if it is an elf file. 0 if not
  */
