@@ -26,8 +26,6 @@ void error_file(int file_from, int file_to, char *argv[])
 	}
 }
 
-
-
 /**
  * main - Function that check code for Holberton School
  *
@@ -54,7 +52,7 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	err_file(file_from, file_to, argv);
+	error_file(file_from, file_to, argv);
 
 	num_chars = 1024;
 	while (num_chars == 1024)
@@ -64,7 +62,7 @@ int main(int argc, char *argv[])
 			error_file(-1, 0, argv);
 		num_wr = write(file_to, buffer, num_chars);
 		if (num_wr == -1)
-			err_file(0, -1, argv);
+			error_file(0, -1, argv);
 	}
 
 	err_close = close(file_from);
