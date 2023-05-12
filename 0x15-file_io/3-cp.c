@@ -29,7 +29,7 @@ void error_file(int file_from, int file_to, char *argv[])
 
 
 /**
- * main - Function that check the code for ALX Africa in C language
+ * main - Function that check code for Holberton School
  *
  * @argc: Number of arguments
  *
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         int error_close;
 	ssize_t num_chars;
 	ssize_t	num_wr;
-	char buffer[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -59,10 +59,10 @@ int main(int argc, char *argv[])
 	num_chars = 1024;
 	while (num_chars == 1024)
 	{
-		num_chars = read(file_from, buffer, 1024);
+		num_chars = read(file_from, buf, 1024);
 		if (num_chars == -1)
 			error_file(-1, 0, argv);
-		num_wr = write(file_to, buffer, num_chars);
+		num_wr = write(file_to, buf, num_chars);
 		if (num_wr == -1)
 			error_file(0, -1, argv);
 	}
