@@ -49,7 +49,7 @@ void print_addr(char *ptr)
 
 		}
 	}
-	printf("\n");
+	printf("\n");t
 }
 
 /**
