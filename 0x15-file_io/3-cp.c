@@ -41,10 +41,10 @@ int main(int argc, char *argv[])
 {
 	int file_from;
         int file_to;
-        int error_close;
+        int err_close;
 	ssize_t num_chars;
 	ssize_t	num_wr;
-	char buf[1024];
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -54,28 +54,28 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_from, file_to, argv);
+	err_file(file_from, file_to, argv);
 
 	num_chars = 1024;
 	while (num_chars == 1024)
 	{
-		num_chars = read(file_from, buf, 1024);
+		num_chars = read(file_from, buffer, 1024);
 		if (num_chars == -1)
 			error_file(-1, 0, argv);
-		num_wr = write(file_to, buf, num_chars);
+		num_wr = write(file_to, buffer, num_chars);
 		if (num_wr == -1)
-			error_file(0, -1, argv);
+			err_file(0, -1, argv);
 	}
 
-	error_close = close(file_from);
-	if (error_close == -1)
+	err_close = close(file_from);
+	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
-	error_close = close(file_to);
-	if (error_close == -1)
+	err_close = close(file_to);
+	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
