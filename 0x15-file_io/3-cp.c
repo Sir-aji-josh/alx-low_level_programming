@@ -40,8 +40,7 @@ int main(int argc, char *argv[])
 	int file_from;
         int file_to;
         int err_close;
-	ssize_t numchars;
-	ssize_t	numwr;
+	ssize_t num_chars, num_wr;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -54,14 +53,14 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file_from, file_to, argv);
 
-	numchars = 1024;
-	while (numchars == 1024)
+	num_chars = 1024;
+	while (num_chars == 1024)
 	{
-		numchars = read(file_from, buffer, 1024);
-		if (numchars == -1)
+		num_chars = read(file_from, buffer, 1024);
+		if (num_chars == -1)
 			error_file(-1, 0, argv);
-		numwr = write(file_to, buffer, numchars);
-		if (numwr == -1)
+		num_wr = write(file_to, buffer, num_chars);
+		if (num_wr == -1)
 			error_file(0, -1, argv);
 	}
 
