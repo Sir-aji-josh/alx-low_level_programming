@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * error_file - Fuction that checks if files can be opened
+ * error_file - Function That Checks If Files Can Be Opened
  *
  * @file_from: Current file_from
  *
- * @file_to: New current file_to
+ * @file_to: New current file_To
  *
- * @argv: Arguments  vector
+ * @argv: Arguments Import Statues 
  *
- * Return: None 
+ * Return: No Return or Always Void (0)
  */
 void error_file(int file_from, int file_to, char *argv[])
 {
@@ -27,20 +27,20 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - Function that check code for Holberton School
+ * main - Function That Check Code For Holberton School
  *
- * @argc: Number of arguments
+ * @argc: Number Of Arguments
  *
- * @argv: Arguments  vector
+ * @argv: Arguments Import Statues 
  *
- * Return: Always void (0)
+ * Return: Void (0) Always
  */
 int main(int argc, char *argv[])
 {
 	int file_from;
         int file_to;
         int err_close;
-	ssize_t num_chars, num_wr;
+	ssize_t num_chars, no_wr;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -59,8 +59,8 @@ int main(int argc, char *argv[])
 		num_chars = read(file_from, buffer, 1024);
 		if (num_chars == -1)
 			error_file(-1, 0, argv);
-		num_wr = write(file_to, buffer, num_chars);
-		if (num_wr == -1)
+		no_wr = write(file_to, buffer, num_chars);
+		if (no_wr == -1)
 			error_file(0, -1, argv);
 	}
 
