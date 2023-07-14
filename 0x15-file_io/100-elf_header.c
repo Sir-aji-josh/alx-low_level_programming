@@ -7,8 +7,9 @@
 #include <unistd.h>
 
 /**
- * print_addr - Function that prints address
- * @ptr: To the magic
+ * print_addr - Function That Prints Address
+ *
+ * @ptr: Points To The Magic
  *
  * Return: None
  */
@@ -54,7 +55,7 @@ void print_addr(char *ptr)
 
 /**
  * print_type - Funtion that prints type
- * @ptr: To the magic
+ * @ptr: Points To The Magic
  *
  * Return: None
  */
@@ -83,8 +84,8 @@ void print_type(char *ptr)
 }
 
 /**
- * print_osabi - Funtion that prints osabi
- * @ptr: To the magic
+ * print_osabi - Function That Prints Osabi
+ * @ptr: Points To the agic
  *
  * Return: None
  */
@@ -108,9 +109,9 @@ void print_osabi(char *ptr)
 
 /**
  * print_version - Funtion that prints version
- * @ptr: To the magic
+ * @ptr: Points To The Magic
  *
- * Return: Nothing
+ * Return: None
  */
 void print_version(char *ptr)
 {
@@ -123,11 +124,12 @@ void print_version(char *ptr)
 
 	printf("\n");
 }
+
 /**
  * print_data - Funtion that prints data
- * @ptr: To the magic
+ * @ptr: Points To The Magic
  *
- * Return: Nothing
+ * Return: None
  */
 void print_data(char *ptr)
 {
@@ -141,8 +143,8 @@ void print_data(char *ptr)
 		printf(", big endian\n");
 }
 /**
- * print_magic - Function that prints magic info
- * @ptr: To the  magic
+ * print_magic - Function That Prints Magic Info
+ * @ptr: Points To The Magic
  *
  * Return: None
  */
@@ -160,8 +162,8 @@ void print_magic(char *ptr)
 }
 
 /**
- * check_sys - Function that check the version system
- * @ptr: To the magic 
+ * check_sys: Function That check the version system
+ * @ptr: Points To The Magic
  *
  * Return: None
  */
@@ -176,10 +178,10 @@ void check_sys(char *ptr)
 	print_magic(ptr);
 
 	if (sys == '1')
-		printf("  Class:                             ELF32\n");
+		printf("  Class:                         ELF32\n");
 
 	if (sys == '2')
-		printf("  Class:                             ELF64\n");
+		printf("  Class:                         ELF64\n");
 
 	print_data(ptr);
 	print_version(ptr);
@@ -189,8 +191,8 @@ void check_sys(char *ptr)
 }
 
 /**
- * check_elf - Function that check if it is an elf file
- * @ptr: To the magic
+ * check_elf - Function That Check If It Is An Elf Filess
+ * @ptr: Points To The Magic
  *
  * Return: 1 if it is an elf file. 0 if not
  */
@@ -208,7 +210,7 @@ int check_elf(char *ptr)
 }
 
 /**
- * main - check the code for Holberton School students
+ * main - Check The Code For Holberton Class Alx Cohort 15 Students
  * @argc: Aumber of arguments
  * @argv: arguments vector
  *
