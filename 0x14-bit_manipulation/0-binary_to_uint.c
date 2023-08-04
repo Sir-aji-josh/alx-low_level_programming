@@ -1,28 +1,38 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * binary_to_uint - Function that converts a binary number
- *                  to unsigned int
+ * binary_to_uint – Converts A Binary Number To An UnI
+ * unsigned int.
+ * @b: binary.
  *
- * @b: string bearing the binary number
- *
- * Return: the converted number
+ * Return: unsigned int.
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int a;
-	unsigned int dec_nums = 0;
+unsigned int UnI;
+int lens, bases_two;
 
-	if (!b)
-		return (0);
+if (!b)
+return (0);
 
-	for (a = 0; b[a]; a++)
-	{
-		if (b[a] < '0' || b[a] > '1')
-			return (0);
+UnI = 0;
 
-		dec_nums = 2 * dec_nums + (b[a] - '0');
-	}
-	return (dec_nums);
+for (lens = 0; b[lens] != '\0'; lens++)
+;
+
+for (lens--, bases_two = 1; lens >= 0; lens--, bases_two *= 2)
+{
+if (b[lens] != '0' && b[lens] != '1')
+{
+return (0);
 }
+
+if (b[lens] & 1)
+{
+UnI += bases_two;
+}
+}
+return (UnI);
+}
+
+

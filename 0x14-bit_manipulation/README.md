@@ -1,1 +1,1 @@
-0x14-bit_manipulation task to be compelectly done before te first dead line
+0x14-bit_manipulation task done by joshman.aji
