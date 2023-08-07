@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * create_file - creates a file that function 
+ * create_file - creates a file that function
+ *
  * @filename: variable pointer to new doc
- * @text_content: content written in create file
- * Description: Create a function that creates a file.
+ *
+ * @text_content: content write in create file
 
  * Return: 1 on success, -1 on failure
  */
