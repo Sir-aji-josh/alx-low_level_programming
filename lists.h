@@ -14,15 +14,9 @@
  */
 typedef struct dlistint_s
 {
-<<<<<<< HEAD
 	int n;
 	struct dlistint_s *prev;
 	struct dlistint_s *next;
-=======
-        int n;
-        struct dlistint_s *prev;
-        struct dlistint_s *next;
->>>>>>> 3696ff57de6e664f80387db75be721b0904733fb
 } dlistint_t;
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
@@ -36,7 +30,3 @@ void free_dlistint(dlistint_t *head);
 
 #endif
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3696ff57de6e664f80387db75be721b0904733fb
