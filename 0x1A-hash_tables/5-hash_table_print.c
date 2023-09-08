@@ -1,9 +1,10 @@
-#include "hash_tables.h"
+#include "./hash_tables.h"
 
 /**
- * hash_table_print – Function that Prints a hash table.
+ * hash_table_print - Prints a hash table.
+ * @ht: A pointer to the hash table.
+ *
  * Description: Print a key/value pair of hash table.
- * @ht: A pointer to the hash table to print.
  */
 void hash_table_print(const hash_table_t *ht)
 {
@@ -35,4 +36,3 @@ void hash_table_print(const hash_table_t *ht)
 	}
 	printf("}\n");
 }
-
