@@ -2,10 +2,8 @@
 
 /**
  * hash_table_print – Function that Prints a hash table.
+ * Description: Print a key/value pair of hash table.
  * @ht: A pointer to the hash table to print.
- *
- * Description: Key/value pairs are to be printed
- *   in the order of the hash table.
  */
 void hash_table_print(const hash_table_t *ht)
 {
